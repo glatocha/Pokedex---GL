@@ -273,6 +273,10 @@ nav #langSelection {
   cursor: pointer;
 }
 
+.load-more-btn:disabled {
+  background-color: grey;
+}
+
 .open-pokeDB-btn {
   width: 90%;
   padding: 10px;

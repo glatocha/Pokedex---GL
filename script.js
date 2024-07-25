@@ -33,10 +33,13 @@ async function fetchPokemons() {
 }
 
 loadBtn.addEventListener("click", async () => {
+  loadBtn.disabled = true;
+  //disable untill all loaded
   for (let i = currentNoOfPokemons + 1; i <= currentNoOfPokemons + 50; i++) {
     await getPokemon(i);
   }
   currentNoOfPokemons += 50;
+  loadBtn.disabled = false;
 });
 
 async function getPokemon(id) {
